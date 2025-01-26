@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background-color: #fdfeff;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .input-box {
+    @apply w-full text-sm bg-transparent border-[1.5px] border-gray-200 px-5 py-3 rounded-lg mb-4 outline-none
+    focus:border-purple-500 focus:shadow-[0_0_0_4px_rgba(168,85,247,0.1)]
+    transition-all duration-200;
+  }
+  .btn-primary {
+    @apply w-full text-sm bg-gradient-button text-white p-2 rounded my-1 hover:opacity-90;
+  }
+  .icon-btn {
+    @apply text-xl cursor-pointer text-slate-300 hover:text-primary;
+  }
+  .input-label {
+    @apply text-xs text-slate-400;
+  }
+  .start_button {
+    background: linear-gradient(267deg, #4f1273 10%, #9e0be3 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.6s ease;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .start_button:hover {
+    background: linear-gradient(267deg, #9c0ae0 10%, #4f1273 100%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .start_button.transparent {
+    background: transparent;
+    color: inherit;
+  }
+
+  .start_button.transparent:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    @apply bg-[#c378e8] py-4 px-8 text-white top-0 z-[1000] shadow-md;
+  }
+
+  .navbar-container {
+    @apply flex items-center justify-between max-w-[1400px] mx-auto gap-6;
+  }
+
+  .xlogo {
+    @apply w-[100px] object-contain;
+  }
+
+  .categories-dropdown {
+    @apply relative;
+  }
+
+  .categories-btn {
+    @apply px-5 py-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer flex items-center gap-2 
+    font-medium transition-all duration-200 hover:border-[#8a4fff] hover:text-[#8a4fff] text-gray-700;
+  }
+
+  .arrow-down {
+    @apply text-sm ml-1;
+  }
+
+  .dropdown-content {
+    @apply absolute top-[120%] left-0 bg-white border border-gray-200 rounded-xl py-2 shadow-lg min-w-[220px] z-[1001];
+  }
+
+  .dropdown-content a {
+    @apply block px-5 py-3 text-gray-800 hover:bg-[#f8f5ff] hover:text-[#8a4fff] transition-all duration-200;
+  }
+
+  .search-container {
+    @apply flex-1 flex max-w-[600px] relative;
+  }
+
+  .search-input {
+    @apply flex-1 px-5 py-3 border border-gray-200 rounded-lg text-[0.95rem] outline-none transition-all 
+    duration-200 w-full focus:border-[#8a4fff] focus:shadow-[0_0_0_2px_rgba(138,79,255,0.1)] bg-white text-gray-700;
+  }
+
+  .search-button {
+    @apply absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-transparent border-none cursor-pointer text-[#8a4fff] flex items-center justify-center;
+  }
+
+  .nav-links {
+    @apply flex gap-8;
+  }
+
+  .nav-links a {
+    @apply text-white font-medium hover:text-[#450876] transition-colors duration-200;
+  }
+
+  .nav-right {
+    @apply flex items-center gap-5;
+  }
+
+  .notifications {
+    @apply relative cursor-pointer p-2;
+  }
+
+  .notification-badge {
+    @apply absolute -top-1 -right-1 bg-[#4a0b7d] text-white rounded-full px-1.5 py-0.5 text-xs 
+    border-2 border-white min-w-[20px] h-[20px] flex items-center justify-center;
+  }
+
+  .cart-icon {
+    @apply text-white w-[30px] h-[30px] flex items-center justify-center bg-[#eeeef0] rounded-[30%] cursor-pointer p-[5px];
+  }
+
+  .post-ad-btn {
+    @apply bg-[#50048a] text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-200 
+    hover:bg-white hover:text-[#4a0b7d] hover:-translate-y-0.5 shadow-sm hover:shadow-md;
+  }
+
+  .signin-btn {
+    @apply text-[#4a0b7d] px-6 py-2.5 border border-gray-200 rounded-lg font-medium transition-all 
+    duration-200 bg-white hover:border-[#4a0b7d] hover:bg-[#f8f5ff] shadow-sm hover:shadow-md;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .nav-links {
+      @apply hidden;
+    }
+    
+    .navbar-container {
+      @apply gap-4;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      @apply px-4 py-3;
+    }
+    
+    .categories-btn span {
+      @apply hidden;
+    }
+    
+    .search-container {
+      @apply max-w-none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .signin-btn {
+      @apply hidden;
+    }
+    
+    .search-input {
+      @apply hidden;
+    }
+    
+    .post-ad-btn {
+      @apply px-4 py-3;
+    }
+  }
+}

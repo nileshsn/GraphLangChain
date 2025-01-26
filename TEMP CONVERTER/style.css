@@ -1,0 +1,60 @@
+body{
+    background-color: #18122b ;
+    color: #635985;
+    font-family: 'DM Mono', monospace;
+}
+input{
+    background-color: #cecece;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+input:focus{
+    background-color: #6402a1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+textarea{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+textarea:focus{
+    background-color: #6402a1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+button{
+    background-color: #635985;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+button:hover{
+    background-color: #6402a1;
+    border-radius: 5px;
+    -webkit-border-radius: 5PX;
+    -moz-border-radius: 5PX;
+    -ms-border-radius: 5PX;
+    -o-border-radius: 5PX;
+}
+button:focus{
+    background-color: #01b11b;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
