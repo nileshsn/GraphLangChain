@@ -1,0 +1,33 @@
+footer {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  footer {
+    height: 20vh;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    height: 15vh;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+}

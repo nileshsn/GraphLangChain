@@ -1,0 +1,65 @@
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: var(--card-border);
+    background: var(--card-background);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p {
+    font-size: larger;
+}
+
+.contact-icon {
+    cursor: default;
+}
+
+.email-icon {
+    height: 2.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    #contact {
+        height: 40vh;
+    }
+    
+    .contact-info-upper-container {
+        flex-direction: column;
+    }
+    
+    .contact-info-container {
+        margin: 0.5rem;
+    }
+    
+    .contact-info-container p {
+        font-size: 1rem;
+    }
+    
+    .email-icon {
+        height: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info-upper-container {
+        flex-direction: column;
+    }
+}

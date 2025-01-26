@@ -1,0 +1,126 @@
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+.scrolling-overflow {
+  overflow: hidden;
+}
+
+.skills-scrolling,
+.skills-scrolling-reverse {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+.skills-scrolling-reverse {
+  animation: scroll-reverse 15s linear infinite;
+}
+
+.skills-row {
+  display: inline-flex;
+  gap: 2rem;
+  animation: scroll 60s linear infinite;
+}
+
+.skill-box {
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  min-width: 120px;
+}
+
+.skill-img-box {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+}
+
+.skill-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@media screen and (max-width: 1024px) {
+  .skills-scrolling, .skills-scrolling-reverse {
+    animation-duration: 15s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-scrolling, .skills-scrolling-reverse {
+    animation-duration: 10s;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-scrolling, .skills-scrolling-reverse {
+    animation-duration: 10s;
+  }
+  
+  .skill-box {
+    width: 120px;
+  }
+  
+  .skill-img-box {
+    height: 60px;
+  }
+  
+  .skill-logo {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+.skills-scrolling-reverse .skills-row {
+  animation-direction: reverse;
+}

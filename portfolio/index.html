@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilesh Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="shortcut icon" href="ASSETS/profile-pic.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <nav id="desktop-nav">
+        <div class="logo">NILE</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Switch Theme</em>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">NILE</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+        </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Nilesh Enugandhula profile picture">
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">ENUGANDHULA NILESH</h1>
+        <div class='console-container'>
+          <span id='text'></span>
+          <div class='console-underscore' id='console'>&#95;</div>
+        </div>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/enugandhula-nilesh-400a14226/'">
+          <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/nileshsn'">
+        </div>
+      </div>
+    </section>
+    <section id="about" class="reveal">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <!-- <div class="section__pic-container">
+                <img src="./ASSETS/about-pic.png" alt="Profile picture" class="about-pic" />
+            </div> -->
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./ASSETS/experience.png" alt="Experience icon" class="icon" />
+                        <h3>Experience</h3>
+                        <p>▪ Contributor Intern · GSSoC'24 · Internship</p>
+                        <p>▪ Participant, ALP · Aspire Institute · Apprenticeship</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./ASSETS/education.png" alt="Education icon" class="icon" />
+                        <h3>Education</h3>
+                        <p>▪ BTech in Computer Science RGUKT-Basar</p>
+                        <p>▪ SSC Vasavi High School, BNS </p>
+                    </div>
+                </div>
+                <div class="text-container">
+                  <p>
+                    👋 Hello there! I'm a passionate MERN stack developer and Gen AI enthusiast. 
+                    Currently contributing to GSSoC'24 and exploring the exciting world of generative AI. 
+                    I'm dedicated to creating efficient and innovative applications while actively 
+                    participating in the developer community and pushing the boundaries of AI technology.
+                  </p>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="./ASSETS/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" /> -->
+      </section>
+      <section id="experience" class="reveal">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="scrolling-overflow">
+          <div class="skills-scrolling">
+            <div class="skills-row">
+              <!-- Frontend Skills -->
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/html.png" alt="HTML5" class="skill-logo"></div>
+                <h3>HTML</h3>
+                <!-- <p>expert</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/css.png" alt="CSS3" class="skill-logo"></div>
+                <h3>CSS</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/js.png" alt="JavaScript" class="skill-logo"></div>
+                <h3>JavaScript</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/react.png" alt="React" class="skill-logo"></div>
+                <h3>React</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <!-- Backend Skills -->
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/python.png" alt="Python" class="skill-logo"></div>
+                <h3>Python</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/java.png" alt="Python" class="skill-logo"></div>
+                <h3>Java</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/html.png" alt="HTML5" class="skill-logo"></div>
+                <h3>HTML</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/css.png" alt="CSS3" class="skill-logo"></div>
+                <h3>CSS</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/js.png" alt="JavaScript" class="skill-logo"></div>
+                <h3>JavaScript</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/react.png" alt="React" class="skill-logo"></div>
+                <h3>React</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <!-- Backend Skills -->
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/python.png" alt="Python" class="skill-logo"></div>
+                <h3>Python</h3>
+                <!-- <p>intermediate</p>  -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/java.png" alt="Python" class="skill-logo"></div>
+                <h3>Java</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/html.png" alt="HTML5" class="skill-logo"></div>
+                <h3>HTML</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/css.png" alt="CSS3" class="skill-logo"></div>
+                <h3>CSS</h3>
+                <!-- <p>intermediate</p>  -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/js.png" alt="JavaScript" class="skill-logo"></div>
+                <h3>JavaScript</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/react.png" alt="React" class="skill-logo"></div>
+                <h3>React</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <!-- Backend Skills -->
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/python.png" alt="Python" class="skill-logo"></div>
+                <h3>Python</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/java.png" alt="Python" class="skill-logo"></div>
+                <h3>Java</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="skills-scrolling-reverse">
+            <div class="skills-row">
+              <!-- AI/ML Skills -->
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/llms.png" alt="TensorFlow" class="skill-logo" sizes="500px"></div>
+                <h3>LLMs</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/pytorch.png" alt="PyTorch" class="skill-logo"></div>
+                <h3>PyTorch</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/nlp.png" alt="Hugging Face" class="skill-logo"></div>
+                <h3>NLP</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/huggingface.png" alt="Hugging Face" class="skill-logo"></div>
+                <h3>huggingface</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/langchain.png" alt="LangChain" class="skill-logo"></div>
+                <h3>LangChain</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/langgraph.png" alt="LangChain" class="skill-logo"></div>
+                <h3>LangGraph</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/nn.png" alt="TensorFlow" class="skill-logo"></div>
+                <h3>NeuralNetwork</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/llms.png" alt="TensorFlow" class="skill-logo"></div>
+                <h3>LLMs</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/pytorch.png" alt="PyTorch" class="skill-logo"></div>
+                <h3>PyTorch</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/nlp.png" alt="Hugging Face" class="skill-logo"></div>
+                <h3>NLP</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/huggingface.png" alt="Hugging Face" class="skill-logo"></div>
+                <h3>huggingface</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/langchain.png" alt="LangChain" class="skill-logo"></div>
+                <h3>LangChain</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/langgraph.png" alt="LangChain" class="skill-logo"></div>
+                <h3>LangGraph</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/nn.png" alt="TensorFlow" class="skill-logo"></div>
+                <h3>NeuralNetwork</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/llms.png" alt="TensorFlow" class="skill-logo"></div>
+                <h3>LLMs</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/pytorch.png" alt="PyTorch" class="skill-logo"></div>
+                <h3>PyTorch</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/nlp.png" alt="Hugging Face" class="skill-logo"></div>
+                <h3>NLP</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/huggingface.png" alt="Hugging Face" class="skill-logo"></div>
+                <h3>huggingface</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/langchain.png" alt="LangChain" class="skill-logo"></div>
+                <h3>LangChain</h3>
+                <!-- <p>intermediate</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/langgraph.png" alt="LangChain" class="skill-logo"></div>
+                <h3>LangGraph</h3>
+                <!-- <p>basic</p> -->
+              </div>
+              <div class="skill-box">
+                <div class="skill-img-box"><img src="./assets/nn.png" alt="TensorFlow" class="skill-logo"></div>
+                <h3>NeuralNetwork</h3>
+                <!-- <p>basic</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section id="projects" class="reveal">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project_1.png" alt="EcoLabel Project" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">EcoLabel</h2>
+            <p>A platform providing insights into the health, environmental, and societal impacts of everyday products.</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nileshsn/EcoLabel'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://ecolabel-na.streamlit.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project_2.png" alt="Conversational Bot Project" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Conversational Bot with Chat History</h2>
+            <p>A RAG-based conversational bot with PDF upload capabilities and chat history functionality.</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nileshsn/Conversational-Bot-Chat-history'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://conversational-bot-chat-history-nile.streamlit.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project_3.png" alt="OvenOasis Project" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">OvenOasis</h2>
+            <p>A frontend project for food enthusiasts to explore, search, and follow recipes with ease.</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nileshsn/OvenOasis'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='http://ovenoasis.netlify.app'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project_4.png" alt="Ecommerce Project" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Ecommerce Website</h2>
+            <p>This is a fully responsive e-commerce website frontend built with React, HTML, CSS, and JavaScript.</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nileshsn/E-Commerce'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://ecommerce-nile.netlify.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" /> -->
+    </section>
+    <section id="contact" class="reveal">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+              <img 
+              src="./ASSETS/email.png" 
+              alt="Email icon"
+              class="icon contact-icon email-com"
+              />
+              <p><a href="mailto:heynilesh05@gmail.com">heynilesh05@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+              <img 
+              src="./ASSETS/linkedin.png" 
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+              />
+              <p><a href="https://www.linkedin.com/in/enugandhula-nilesh-400a14226/">LinkedIn</a></p>
+          </div>
+      </div>
+  </section>
+  <!-- <div id="socials-container">
+      <img src="./ASSETS/linkedin.png" 
+      alt="LinkedIn Profile" class="icon" 
+      onclick="location.href='https://www.linkedin.com/in/enugandhula-nilesh-400a14226/'" />
+      <img src="./ASSETS/github.png" 
+      alt="Github Profile" class="icon" 
+      onclick="location.href='https://github.com/nileshsn'" />
+  </div> -->
+   <footer>
+        <!-- <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav> -->
+        <p>Copyright &#169; 2024 ENUGANDHULA NILESH. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
